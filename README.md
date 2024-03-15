@@ -15,4 +15,4 @@ $obf = new HidedHtml\Obfuscator();
 ## Result
 ![Example result](https://raw.githubusercontent.com/Allespro/php-html-obfuscate/main/example/example.png)
 
-*Emojis and som special symbols not yet supported, be careful.*
+*Emojis and some special symbols not yet supported, be careful.*
