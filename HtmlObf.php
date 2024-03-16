@@ -26,6 +26,7 @@ class Obfuscator {
         return $randomString;
     }
     private function __splitStringRandomLength($string) {
+        $this::__refreshRandom();
         $array = mb_str_split($string, encoding: $this->encoding);
         $result = [];
         while (count($array) > 0) {
