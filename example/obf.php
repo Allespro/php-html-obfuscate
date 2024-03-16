@@ -10,7 +10,7 @@ $obf = new HidedHtml\Obfuscator();
 </head>
 <body>
   <div style="text-align: center; margin-top: 100px;">
-    <p><?=$obf->obf('I\'m hidden')?></p>
+    <p><?=$obf->obf('I\'m hidden 🥳.')?></p>
     <p>And I'm not</p>
   </div>
   

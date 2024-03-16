@@ -6,23 +6,23 @@ class Obfuscator {
     }
     private function __splitAtRandom($str)  {
         $this::__refreshRandom();
-        $length = strlen($str);
+        $length = mb_strlen($str, 'UTF-8');
         $randomIndex = rand(0, $length - 1);
-        $firstPart = substr($str, 0, $randomIndex);
-        $secondPart = substr($str, $randomIndex);
+        $firstPart = mb_substr($str, 0, $randomIndex, 'UTF-8');
+        $secondPart = mb_substr($str, $randomIndex, encoding: 'UTF-8');
         return [$firstPart, $secondPart];
     }
     private function __randomString($length = 10) {
         $this::__refreshRandom();
         $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
+        $charactersLength = mb_strlen($characters, encoding: 'UTF-8');
         $randomString = '';
         for ($i = 0; $i < $length; $i++)
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         return $randomString;
     }
     private function __splitStringRandomLength($string) {
-        $array = str_split($string);
+        $array = mb_str_split($string, encoding: 'UTF-8');
         $result = [];
         while (count($array) > 0) {
             $this::__refreshRandom();
